@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function changeTitle() {
+            const newTitle = "document cu D mic";
+            document.title = newTitle;
+        }
+
+        function addLiElement() {
+            const ulElement = document.getElementById("list");
+            const newLi = document.createElement("li");
+            newLi.textContent = randomString();
+            ulElement.appendChild(newLi);
+        }
+
+        function randomString() {
+            return Math.random().toString(10).substring(2, 7);
+        }
+    </script>
+    <button onClick="changeTitle()">Change Title</button>
+    <button onclick="addLiElement()">Add li</button>
+    <ul id="list"></ul>
+</body>
+
+</html>
