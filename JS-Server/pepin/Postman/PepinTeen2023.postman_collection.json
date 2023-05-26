@@ -1,0 +1,528 @@
+{
+	"info": {
+		"_postman_id": "3f339945-ca0d-4cb0-ad5b-1ddce02bc111",
+		"name": "PepinTeen2023",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "Open Library",
+					"item": [
+						{
+							"name": "Book",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://openlibrary.org/api/books?bibkeys=ISBN:0201558025,LCCN:93005405&format=json",
+									"protocol": "https",
+									"host": [
+										"openlibrary",
+										"org"
+									],
+									"path": [
+										"api",
+										"books"
+									],
+									"query": [
+										{
+											"key": "bibkeys",
+											"value": "ISBN:0201558025,LCCN:93005405"
+										},
+										{
+											"key": "format",
+											"value": "json"
+										}
+									]
+								},
+								"description": "The API allows requesting information on one or more books using ISBNs, OCLC Numbers, LCCNs and OLIDs (Open Library IDs)."
+							},
+							"response": []
+						},
+						{
+							"name": "Covers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://covers.openlibrary.org/b/isbn/0385472579-S.jpg",
+									"protocol": "http",
+									"host": [
+										"covers",
+										"openlibrary",
+										"org"
+									],
+									"path": [
+										"b",
+										"isbn",
+										"0385472579-S.jpg"
+									]
+								},
+								"description": "Our Covers API provides a programmatic method to access the book covers and author photos available in the Open Library Covers Repository."
+							},
+							"response": []
+						},
+						{
+							"name": "Search",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://openlibrary.org/search.json?q=the+lord+of+the+rings",
+									"protocol": "http",
+									"host": [
+										"openlibrary",
+										"org"
+									],
+									"path": [
+										"search.json"
+									],
+									"query": [
+										{
+											"key": "q",
+											"value": "the+lord+of+the+rings"
+										}
+									]
+								},
+								"description": "Open Library provides an experimental API to search."
+							},
+							"response": []
+						}
+					],
+					"description": "Open Library is an initiative of the Internet Archive, a 501(c)(3) non-profit, building a digital library of Internet sites and other cultural artifacts in digital form. Other projects include the Wayback Machine, archive.org and archive-it.org.\n\nWebsite - https://openlibrary.org/developers/api",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				}
+			],
+			"description": "These are public API endpoints for books.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Earthquakes",
+			"item": [
+				{
+					"name": "Earthquakes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2020-01-01&endtime=2020-01-02",
+							"protocol": "https",
+							"host": [
+								"earthquake",
+								"usgs",
+								"gov"
+							],
+							"path": [
+								"fdsnws",
+								"event",
+								"1",
+								"query"
+							],
+							"query": [
+								{
+									"key": "format",
+									"value": "geojson"
+								},
+								{
+									"key": "starttime",
+									"value": "2020-01-01"
+								},
+								{
+									"key": "endtime",
+									"value": "2020-01-02"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns a list of eqrthquakes for a time period."
+					},
+					"response": []
+				}
+			],
+			"description": "These are public API endpoints for earthquakes.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Jokes",
+			"item": [
+				{
+					"name": "Random Joke",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://official-joke-api.appspot.com/random_joke",
+							"protocol": "https",
+							"host": [
+								"official-joke-api",
+								"appspot",
+								"com"
+							],
+							"path": [
+								"random_joke"
+							]
+						},
+						"description": "Returns a random joke."
+					},
+					"response": []
+				},
+				{
+					"name": "Dad Jokes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://icanhazdadjoke.com/",
+							"protocol": "https",
+							"host": [
+								"icanhazdadjoke",
+								"com"
+							],
+							"path": [
+								""
+							]
+						},
+						"description": "Returns a random dad joke."
+					},
+					"response": []
+				}
+			],
+			"description": "These are public API endpoints for jokes.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Pokemon",
+			"item": [
+				{
+					"name": "Pokemon Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pokeapi.co/api/v2/pokemon/ditto/",
+							"protocol": "https",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"pokemon",
+								"ditto",
+								""
+							]
+						},
+						"description": "All the Pokémon data you'll ever need in one place,\neasily accessible through a modern RESTful API."
+					},
+					"response": []
+				}
+			],
+			"description": "These are public API endpoints for Pokemon.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Sun",
+			"item": [
+				{
+					"name": "Sunrise and Sunset",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sunrise-sunset",
+								"org"
+							],
+							"path": [
+								"json"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "36.7201600"
+								},
+								{
+									"key": "lng",
+									"value": "-4.4203400"
+								}
+							]
+						},
+						"description": "Returns the sunrise and sunset for a longitude and latitude."
+					},
+					"response": []
+				}
+			],
+			"description": "These are public API endpoints for sun.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Game of Thrones",
+			"item": [
+				{
+					"name": "Characters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.anapioficeandfire.com/api/characters",
+							"protocol": "https",
+							"host": [
+								"www",
+								"anapioficeandfire",
+								"com"
+							],
+							"path": [
+								"api",
+								"characters"
+							]
+						},
+						"description": "Returns a list of Game of Thrones characters.\n\nWebsite - https://anapioficeandfire.com/Documentation"
+					},
+					"response": []
+				},
+				{
+					"name": "Books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.anapioficeandfire.com/api/books",
+							"protocol": "https",
+							"host": [
+								"www",
+								"anapioficeandfire",
+								"com"
+							],
+							"path": [
+								"api",
+								"books"
+							]
+						},
+						"description": "Returns a list of Game of Thrones books.\n\nWebsite - https://anapioficeandfire.com/Documentation"
+					},
+					"response": []
+				},
+				{
+					"name": "Houses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.anapioficeandfire.com/api/houses",
+							"protocol": "https",
+							"host": [
+								"www",
+								"anapioficeandfire",
+								"com"
+							],
+							"path": [
+								"api",
+								"houses"
+							]
+						},
+						"description": "Returns a list of Game of Thrones houses.\n\nWebsite - https://anapioficeandfire.com/Documentation"
+					},
+					"response": []
+				}
+			],
+			"description": "These are public API endpoints for Game of Thrones.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Random",
+			"item": [
+				{
+					"name": "Random Yes/No",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://yesno.wtf/api",
+							"protocol": "https",
+							"host": [
+								"yesno",
+								"wtf"
+							],
+							"path": [
+								"api"
+							]
+						},
+						"description": "Returns a random yes or no."
+					},
+					"response": []
+				}
+			],
+			"description": "These are public API endpoints for random data.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
