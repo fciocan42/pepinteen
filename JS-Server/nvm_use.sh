@@ -13,7 +13,7 @@ nvm use --lts
 
 echo
 echo NODE VERSION
-node -version
+node --version
 
 echo
 echo NPM VERSION
