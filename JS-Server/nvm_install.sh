@@ -6,7 +6,7 @@ reset
 echo
 echo SOURCE PROFILE
 # restart de terminal
-source ~/.bash_profile
+source ~/.bashrc
 
 echo
 echo INSTALL LTS
